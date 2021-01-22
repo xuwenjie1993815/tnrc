@@ -83,24 +83,25 @@
           <div class="col">
             <ul class="nav nav-tabs job-tab" id="myTab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="recent-tab" data-toggle="tab" href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#recent" role="tab" aria-controls="recent" aria-selected="true">Recent Job</a>
+                <a class="nav-link active" id="recent-tab" data-toggle="tab" role="tab" aria-controls="recent" aria-selected="true" style="cursor:pointer;">职位</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="feature-tab" data-toggle="tab" href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#feature" role="tab" aria-controls="feature" aria-selected="false">Feature Job</a>
+                <a class="nav-link" id="feature-tab" data-toggle="tab" role="tab" aria-controls="feature" aria-selected="false" style="cursor:pointer;">简历</a>
               </li>
             </ul>
             <div class="tab-content" id="myTabContent">
+              <!-- 简历 -->
               <div class="tab-pane fade show active" id="recent" role="tabpanel" aria-labelledby="recent-tab">
                 <div class="row">
                   <div class="col-lg-6">
 
-                    {volist name="list1" id="vo1"}
+                    {volist name="job_list1" id="vo1"}
                     <div class="job-list half-grid">
                       <div class="body">
                         <div class="content">
-                          <h4><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/job-details.html">{$vo1.jobs_name}</a></h4>
+                          <h4><a href="https://www.cqybhr.com/jobs/jobs-show.php?id={$vo1.id}&style=">{$vo1.jobs_name}</a></h4>
                           <div class="info">
-                            <span class="company"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></a></span>
+                            <span class="company"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>{$vo1.companyname}</a></span>
                             <span class="office-location"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>{$vo1.district_cn}</a></span>
                             <span class="job-type temporary"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{$vo1.wage_cn}</a></span>
                           </div>
@@ -119,13 +120,13 @@
                   </div>
                   <div class="col-lg-6">
 
-                    {volist name="list2" id="vo2"}
+                    {volist name="job_list2" id="vo2"}
                     <div class="job-list half-grid">
                       <div class="body">
                         <div class="content">
-                          <h4><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/job-details.html">{$vo2.jobs_name}</a></h4>
+                          <h4><a href="https://www.cqybhr.com/jobs/jobs-show.php?id={$vo2.id}&style=">{$vo2.jobs_name}</a></h4>
                           <div class="info">
-                            <span class="company"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></a></span>
+                            <span class="company"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>{$vo2.companyname}</a></span>
                             <span class="office-location"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>{$vo2.district_cn}</a></span>
                             <span class="job-type temporary"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{$vo2.wage_cn}</a></span>
                           </div>
@@ -133,7 +134,61 @@
                         <div class="more">
                           <div class="buttons">
                             <a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#" class="button">Apply Now</a>
+                            <a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#" class="favourite"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0  0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
+                          </div>
+                          <p class="deadline">Deadline: Oct 31, 2018</p>
+                        </div>
+                      </div>
+                    </div>
+                    {/volist}
+                  </div>
+                </div>
+              </div>
+              <!-- 公司 -->
+              <div class="tab-pane fade show" id="feature" role="tabpanel" aria-labelledby="feature-tab">
+                <div class="row">
+                  <div class="col-lg-6">
+
+                    {volist name="resume_list1" id="vo1"}
+                    <div class="job-list half-grid">
+                      <div class="body">
+                        <div class="content">
+                          <h4><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/job-details.html">{$vo1.fullname}</a></h4>
+                          <div class="info">
+                            <span class="company"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>{$vo1.sex_cn}</a></span>
+                            <span class="office-location"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>{$vo1.education_cn}</a></span>
+                            <span class="job-type temporary"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{$vo1.experience_cn}</a></span>
+                          </div>
+                        </div>
+                        <div class="more">
+                          <div class="buttons">
+                            <a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#" class="button">Apply Now</a>
                             <a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#" class="favourite"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
+                          </div>
+                          <p class="deadline">Deadline: Oct 31, 2018</p>
+                        </div>
+                      </div>
+                    </div>
+                    {/volist}
+
+                  </div>
+                  <div class="col-lg-6">
+
+                    {volist name="resume_list2" id="vo2"}
+                    <div class="job-list half-grid">
+                      <div class="body">
+                        <div class="content">
+                          <h4><a href="https://www.cqybhr.com/jobs/jobs-show.php?id={$vo2.id}&style=">{$vo2.fullname}</a></h4>
+                          <div class="info">
+                            <span class="company"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>{$vo2.sex_cn}</a></span>
+                            <span class="office-location"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>{$vo2.education_cn}</a></span>
+                            <span class="job-type temporary"><a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{$vo2.experience_cn}</a></span>
+                          </div>
+                        </div>
+                        <div class="more">
+                          <div class="buttons">
+                            <a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#" class="button">Apply Now</a>
+                            <a href="https://www.17sucai.com/preview/1528155/2018-12-27/Oficiona/index.html#" class="favourite"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0  0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
                           </div>
                           <p class="deadline">Deadline: Oct 31, 2018</p>
                         </div>
@@ -181,3 +236,14 @@
     <script src="__STATIC__/Oficiona_files/map.js.下载"></script>
   
 </body></html>
+<script>
+$("#feature-tab").click(function () {
+  $("#feature").attr('class','tab-pane fade show active');
+  $("#recent").attr('class','tab-pane fade show');
+})
+
+$("#recent-tab").click(function () {
+  $("#recent").attr('class','tab-pane fade show active');
+  $("#feature").attr('class','tab-pane fade show');
+})
+</script>
